@@ -102,7 +102,7 @@ let ( <|> ) (p1: 'a parser) (p2: 'a parser): 'a parser =
           let input', result = p1.run input in
           match result with
           | Ok x -> input', Ok x
-          | Error left_error -> p2.run input
+          | Error _ -> p2.run input
   }
 
 let optional (p: 'a parser): 'a option parser =
