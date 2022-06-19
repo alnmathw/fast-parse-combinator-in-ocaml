@@ -41,7 +41,7 @@ let prefix (prefix_str: string): string parser =
   { run = fun input ->
           let unexpected_prefix_error =
             { pos = input.pos;
-              desc = Printf.sprintf "Expected `%s`" prefix_str
+              desc = Printf.sprintf "expected `%s`" prefix_str
             }
           in
           try
@@ -55,7 +55,9 @@ let prefix (prefix_str: string): string parser =
               Error unexpected_prefix_error
           with
             Invalid_argument _ -> Error unexpected_prefix_error
-  }let ( *> ) (p1: 'a parser) (p2: 'b parser): 'b parser =
+  }
+
+let ( *> ) (p1: 'a parser) (p2: 'b parser): 'b parser =
   { run = fun input ->
           input
           |> p1.run
@@ -83,4 +85,21 @@ let ( <*> ) (p1: 'a parser) (p2: 'b parser): ('a * 'b) parser =
                |> p2.run
                |> Result.map (fun (input, y) -> (input, (x, y))))
           |> Result.join
+  }
+
+let ( <|> ) (p1: 'a parser) (p2: 'a parser): 'a parser =
+  { run = fun input ->
+          match p1.run input with
+          | Ok (input', x) -> Ok (input', x)
+          | Error left_error ->
+             input
+             |> p2.run
+             |> Result.map_error (fun right_error ->
+                    { pos = left_error.pos;
+                      desc = Printf.sprintf
+                               "%s or %s"
+                               left_error.desc
+                               right_error.desc;
+                    })
+
   }
