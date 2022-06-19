@@ -1,0 +1,349 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Jun 19 14:40:00 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+OPAM_SWITCH_PREFIX = /home/alnmathw/.opam/default
+# default
+.SHELLFLAGS := -c
+# environment
+OCAML_TOPLEVEL_PATH = /home/alnmathw/.opam/default/lib/toplevel
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+OCAML_LSP_SERVER_LOG = -
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /home/alnmathw/Documents/Projects/functional-programming/fast-parser-combinator-in-ocaml/Fast-Parse-Combinator-in-OCaml
+# environment
+GDK_SCALE = 0.5
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /home/alnmathw/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /mnt/c/Users/user/AppData/Local/Programs/Microsoft VS Code
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/alnmathw/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/home/alnmathw/.opam/default/bin:/home/alnmathw/.local/bin:/home/alnmathw/.nvm/versions/node/v12.16.3/bin:/home/alnmathw/.sdkman/candidates/kotlin/current/bin:/home/alnmathw/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Calibre2/:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Pulse Secure/VC142.CRT/X64/:/mnt/c/Program Files (x86)/Pulse Secure/VC142.CRT/X86/:/mnt/c/Program Files (x86)/Common Files/Pulse Secure/TNC Client Plugin/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/user/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/user/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/user/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/user/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/user/AppData/Roaming/npm:/mnt/c/Program Files/PostgreSQL/14/bin:/mnt/c/Program Files/PostgreSQL/14/lib:/mnt/c/Program Files/JetBrains/IntelliJ IDEA 2022.1.1/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.1.1/bin:/mnt/c/Users/user/.dotnet/tools:/snap/bin:/home/alnmathw/.dotnet/tools:/home/alnmathw/.cache/cloud-code/installer/google-cloud-sdk/bin:/home/alnmathw/google-cloud-sdk/bin
+# environment
+SDKMAN_DIR = /home/alnmathw/.sdkman
+# environment
+SDKMAN_CANDIDATES_API = https://api.sdkman.io/2
+# environment
+NVM_BIN = /home/alnmathw/.nvm/versions/node/v12.16.3/bin
+# environment
+SDKMAN_PLATFORM = linuxx64
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-05f46b4e-0aa2-4e3d-b020-f61f2eb6fee6.sock
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+CLOUDSDK_METRICS_ENVIRONMENT = cloudcode.vscode
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = 172.31.144.1:0
+# environment
+CLOUDSDK_METRICS_ENVIRONMENT_VERSION = 1.17.1
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/alnmathw/Documents/Projects/functional-programming/fast-parser-combinator-in-ocaml/Fast-Parse-Combinator-in-OCaml
+# default
+.LOADED := 
+# environment
+WSL_INTEROP = /run/WSL/410_interop
+# environment
+PKG_CONFIG_PATH = /home/alnmathw/.opam/default/lib/pkgconfig:/home/alnmathw/.opam/default/lib/pkgconfig
+# environment
+KOTLIN_HOME = /home/alnmathw/.sdkman/candidates/kotlin/current
+# environment
+MANPATH = /home/alnmathw/.nvm/versions/node/v12.16.3/share/man::/home/alnmathw/.opam/default/man:/home/alnmathw/.opam/default/man
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/alnmathw
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = alnmathw
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+NVM_CD_FLAGS = 
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+SDKMAN_VERSION = 5.14.0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = alnmathw
+# environment
+CAML_LD_LIBRARY_PATH = /home/alnmathw/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.08.1/stublibs:/usr/lib/ocaml/stublibs
+# makefile
+.DEFAULT_GOAL := all
+# environment
+GDK_DPI_SCALE = 2
+# environment
+NAME = DESKTOP-71EFBUC
+# environment
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/user/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.0
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /home/alnmathw/.nvm
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LIBGL_ALWAYS_INDIRECT = 1
+# environment
+SDKMAN_CANDIDATES_DIR = /home/alnmathw/.sdkman/candidates
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# variable set hash-table stats:
+# Load=88/1024=9%, Rehash=0, Collisions=5/116=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2064, inode 136992): 13 files, no impossibilities.
+
+# 13 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+test.byte: parcoomTest.byte
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	./parcoomTest.byte
+
+ini.native: src/parcoom.ml examples/ini.ml
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := ini.native
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := src/parcoom.ml examples/ini.ml
+# automatic
+# | := 
+# automatic
+# < := src/parcoom.ml
+# automatic
+# ^ := src/parcoom.ml examples/ini.ml
+# automatic
+# ? := src/parcoom.ml examples/ini.ml
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 5):
+	ocamlfind ocamlopt -I src/ -I examples/ -o ini.native src/parcoom.ml examples/ini.ml
+
+all: ini.native ini.byte parcoomTest.native parcoomTest.byte
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+.PHONY: all test test.native test.byte
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+parcoomTest.byte: src/parcoom.ml tests/parcoomTest.ml
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 14):
+	ocamlfind ocamlc -I src/ -I tests/ -o parcoomTest.byte src/parcoom.ml tests/parcoomTest.ml
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-16 15:26:14.966151
+ 
+#  File has been updated.
+#  Successfully updated.
+
+test.native: parcoomTest.native
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 21):
+	./parcoomTest.native
+
+test: test.native test.byte
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+examples/ini.ml:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-16 15:24:51.831231
+#  File has been updated.
+#  Successfully updated.
+
+parcoomTest.native: src/parcoom.ml tests/parcoomTest.ml
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 11):
+	ocamlfind ocamlopt -I src/ -I tests/ -o parcoomTest.native src/parcoom.ml tests/parcoomTest.ml
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+tests/parcoomTest.ml:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ini.byte: src/parcoom.ml examples/ini.ml
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+	ocamlfind ocamlc -I src/ -I examples/ -o ini.byte src/parcoom.ml examples/ini.ml
+
+# Not a target:
+src/parcoom.ml:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-16 15:25:14.601916
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=15/1024=1%, Rehash=0, Collisions=0/57=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 29 / storage = 292 B / avg = 10 B
+# current buf: size = 8162 B / used = 292 B / count = 29 / avg = 10 B
+
+# strcache performance: lookups = 67 / hit rate = 56%
+# hash-table stats:
+# Load=29/8192=0%, Rehash=0, Collisions=1/67=1%
+# Finished Make data base on Sun Jun 19 14:40:00 2022
+
+ 
