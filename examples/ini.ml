@@ -37,7 +37,7 @@ let read_whole_file (file_path: string): string =
   s
 
 let section_name: string Parcoom.parser =
-  prefix "[" *> parse_while (fun x -> x != ']') <* prefix "]"
+  prefix "[" *> parse_while (fun x -> x != ']') <* any_char
 
 let is_space (x: char) = x == ' ' || x == '\n'
 
@@ -60,11 +60,10 @@ let () =
   | _ :: file_path :: _ ->
      let result = file_path
                   |> read_whole_file
-                  |> make_input
-                  |> ini.run
+                  |> Parcoom.run ini
      in
      (match result with
-      | Ok (_, sections) -> sections |> show_sections |> print_endline
+      | Ok sections -> sections |> show_sections |> print_endline
       | Error error -> Printf.printf
                          "Error during parsing at position %d: %s"
                          error.pos
