@@ -119,3 +119,17 @@ let ( <|> ) (p1: 'a parser) (p2: 'a parser): 'a parser =
             | Ok (input', x) -> Ok (input', Some x)
             | Error _        -> Ok (input, None)
     }
+    let many (p: 'a parser): 'a list parser =
+      { run = fun input ->
+              let result = ref [] in
+              let rec loop input =
+                match p.run input with
+                | Ok (input', x) ->
+                   result := x :: !result;
+                   loop input'
+                | Error _ ->
+                   input
+              in
+              let input' = loop input in
+              Ok (input', !result |> List.rev)
+      }
