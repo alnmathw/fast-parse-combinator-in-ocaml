@@ -16,3 +16,4 @@ type 'a parser =
   }
 
 let fail (e: error) = { run = fun _ -> Error e }
+let wrap (x: 'a) = { run = fun input -> Ok (input, x) }
