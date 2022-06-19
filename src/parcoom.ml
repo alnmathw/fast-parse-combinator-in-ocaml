@@ -113,23 +113,35 @@ let ( <|> ) (p1: 'a parser) (p2: 'a parser): 'a parser =
                     })
 
   }
-  let optional (p: 'a parser): 'a option parser =
-    { run = fun input ->
+
+let optional (p: 'a parser): 'a option parser =
+  { run = fun input ->
+          match p.run input with
+          | Ok (input', x) -> Ok (input', Some x)
+          | Error _        -> Ok (input, None)
+  }
+
+let many (p: 'a parser): 'a list parser =
+  { run = fun input ->
+          let result = ref [] in
+          let rec loop input =
             match p.run input with
-            | Ok (input', x) -> Ok (input', Some x)
-            | Error _        -> Ok (input, None)
-    }
-    let many (p: 'a parser): 'a list parser =
-      { run = fun input ->
-              let result = ref [] in
-              let rec loop input =
-                match p.run input with
-                | Ok (input', x) ->
-                   result := x :: !result;
-                   loop input'
-                | Error _ ->
-                   input
-              in
-              let input' = loop input in
-              Ok (input', !result |> List.rev)
-      }
+            | Ok (input', x) ->
+               result := x :: !result;
+               loop input'
+            | Error _ ->
+               input
+          in
+          let input' = loop input in
+          Ok (input', !result |> List.rev)
+  }
+
+let any_char: char parser =
+  { run = fun input ->
+          let n = String.length input.text in
+          try
+            Ok (input_sub 1 (n - 1) input, String.get input.text 0)
+          with
+            Invalid_argument _ -> Error { pos = input.pos;
+                                          desc = "expected any character"; }
+  }
