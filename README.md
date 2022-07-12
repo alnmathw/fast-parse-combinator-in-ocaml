@@ -14,4 +14,4 @@ $ ./ini.native ./examples/test.ini
 $ make test
 ```
 
-No dependencies is required to use this library. 
+No dependencies are required to use this library. 
