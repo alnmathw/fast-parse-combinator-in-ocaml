@@ -14,4 +14,4 @@ $ ./ini.native ./examples/test.ini
 $ make test
 ```
 
-No dependencies are required to use this library. 
+No dependencies are required to use this library. Simply copy and paste the parcoom.ml file into your project as a library.
