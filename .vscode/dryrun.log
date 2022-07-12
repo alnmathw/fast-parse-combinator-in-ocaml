@@ -1,8 +1,8 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/alnmathw/Documents/Projects/functional-programming/fast-parser-combinator-in-ocaml/Fast-Parse-Combinator-in-OCaml'
+make: Entering directory '/home/alnmathw/Documents/Projects/functional-programming/fast-parse-combinator-in-ocaml'
 ocamlfind ocamlopt -I src/ -I examples/ -o ini.native src/parcoom.ml examples/ini.ml
 ocamlfind ocamlc -I src/ -I examples/ -o ini.byte src/parcoom.ml examples/ini.ml
 ocamlfind ocamlopt -I src/ -I tests/ -o parcoomTest.native src/parcoom.ml tests/parcoomTest.ml
 ocamlfind ocamlc -I src/ -I tests/ -o parcoomTest.byte src/parcoom.ml tests/parcoomTest.ml
-make: Leaving directory '/home/alnmathw/Documents/Projects/functional-programming/fast-parser-combinator-in-ocaml/Fast-Parse-Combinator-in-OCaml'
+make: Leaving directory '/home/alnmathw/Documents/Projects/functional-programming/fast-parse-combinator-in-ocaml'
  
